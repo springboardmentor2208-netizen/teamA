@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.register-wrapper {
+  min-height: calc(100vh - 140px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+
+
+.register-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 36px 32px;
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(20px);
+  border-radius: 22px;
+  box-shadow: 0 30px 60px rgba(0,0,0,.2);
+  text-align: center;
+}
+
+
+.register-card h2 {
+  font-size: 26px;
+  color: #1f2f5c;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 6px 0 22px;
+}
+
+
+.register-card input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 14px;
+  border-radius: 12px;
+  border: 1px solid #dbe2ff;
+}
+
+.username-field {
+  position: relative;
+}
+
+.status {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status.loading { color: #6b7280; }
+.status.available { color: #16a34a; }
+.status.taken { color: #dc2626; }
+
+
+.password-field {
+  position: relative;
+}
+
+.password-field input {
+  padding-right: 48px;
+}
+
+.eye-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  background: transparent;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.eye-btn svg {
+  width: 20px;
+  height: 20px;
+  stroke: #6b7280;
+  transition: 0.2s;
+}
+
+.eye-btn:hover svg {
+  stroke: #2563eb;
+}
+
+
+.strength {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.strength.weak { color: #dc2626; }
+.strength.medium { color: #d97706; }
+.strength.strong { color: #16a34a; }
+
+.error {
+  color: #dc2626;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+
+.register-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 14px;
+  border: none;
+  background: linear-gradient(135deg,#2563eb,#5b8cff);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.register-btn:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 22px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #e5e7eb;
+}
+
+.google-btn {
+  width: 100%;
+  padding: 13px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  background: white;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.google-btn img {
+  width: 18px;
+}
+
+.login-text {
+  margin-top: 18px;
+  font-size: 13px;
+  color: #555;
+}
+
+.login-text a {
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+
+@media (max-width: 480px) {
+  .register-card {
+    padding: 28px 22px;
+  }
+}
